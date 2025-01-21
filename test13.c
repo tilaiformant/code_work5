@@ -1,17 +1,13 @@
 #include <stdio.h>
 int main()
 {
-    int i;
-    int sc[5];
-
-    sc[0] = 5;
-    sc[1] = 15;
-    sc[2] = 25;
-    sc[3] = 35;
-    sc[4] = 45;
-    for (i = 0; i < 5; i++)
-        printf("sc[%d] = %d\n", i, sc[i]);
-
+    int a[5];
+    float b[5];
+    double c[5];
+    printf("a[5]陣列空間 = %d 位元組\n", sizeof(a));
+    printf("b[5]陣列空間 = %d 位元組\n", sizeof(b));
+    printf("c[5]陣列空間 = %d 位元組\n", sizeof(c));
+    
     getchar();
     return 0;
 
