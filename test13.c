@@ -1,28 +1,20 @@
 #include <stdio.h>
 int main()
-{
-    int score[5], sum = 0;
-    float ave;
+{   char *days[] = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
+    int tem[] = {25, 26, 28, 23, 24, 29, 27};
+    int mymax = tem[0];
+    int maxindex = 0;
 
-    printf("輸入數學成績(0~100) : ");
-    scanf("%d",&score[0]);
-    printf("輸入英文分數(0~100) : ");
-    scanf("%d",&score[1]);
-    printf("輸入國文成績(0~100) : ");
-    scanf("%d",&score[2]);
-    printf("輸入物理分數(0~100) : ");
-    scanf("%d",&score[3]);
-    printf("輸入化學分數(0~100) : ");
-    scanf("%d",&score[4]);
-
-    for (int i = 0; i < 5; i++)
+    for (int i = 1; i < 7; i++ )
     {
-        sum += score[i];
+        if (tem[i] > mymax)
+        {
+            mymax = tem[i];
+            maxindex = i;
+        }
     }
-    ave = (float)sum / 5;
-    printf("你的平均成績是: %.2f\n",ave);
     
-    
+    printf("最高溫是在%s, 溫度是%d度\n",days[maxindex], mymax);
     getchar();
     return 0;
 
